@@ -4,6 +4,7 @@ Tutoriel sur la configuration ssh pour se connecter en ssh au ordi de Telecom Pa
 ## IMPORTANT : WIFI
 
 Vous devez etre connecter au wifi "Campus-Telecom" pour pouvoir etablir une connexion ssh.
+
 Vous pouvez aussi utiliser un VPN ([tuto](https://eole.telecom-paris.fr/vos-services/services-numeriques/connexions-aux-reseaux#exterieur)).
 
 ## Instruction
