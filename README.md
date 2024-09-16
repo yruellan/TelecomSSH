@@ -26,9 +26,9 @@ Puis :
 - Taper `rm telecom_ssh_config.sh`
 
 
-Etablir la connection : `ssh telecom`
+### Etablir la connection : `ssh telecom`
 
-Arret de la connexion : `exit`
+### Arret de la connexion : `exit`
 
 
 ## telecom_ssh_config.sh :
