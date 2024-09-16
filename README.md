@@ -22,7 +22,7 @@ Puis :
 - Entrer
 - Controle + X (quitte nano)
 - Taper `./telecom_ssh_config.sh`
-- Entrer le mot de passe Telecom Paris
+- Entrer le mot de passe Telecom Paris / Synapse
 - Taper `rm telecom_ssh_config.sh`
 
 
