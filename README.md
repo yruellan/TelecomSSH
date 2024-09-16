@@ -15,18 +15,15 @@ touch telecom_ssh_config.sh
 chmod u+x telecom_ssh_config.sh
 nano telecom_ssh_config.sh
 ```
-
-- copier coller le fichier telecom_ssh_config.sh (disponible ci-dessous)
-- modifier email, user et host (modifiable seulement au clavier)
+Puis :
+- Copier coller le fichier telecom_ssh_config.sh (disponible ci-dessous)
+- Modifier email, user et host (modifiable seulement au clavier)
 - Controle + O (sauvegarde le fichier)
 - Entrer
 - Controle + X (quitte nano)
-
-taper ensuite
-```sh
-./telecom_ssh_config.sh
-rm telecom_ssh_config.sh
-```
+- Taper `./telecom_ssh_config.sh`
+- Entrer le mot de passe Telecom Paris
+- Taper `rm telecom_ssh_config.sh`
 
 
 Etablir la connection : `ssh telecom`
