@@ -10,48 +10,40 @@ Vous pouvez aussi utiliser un VPN ([tuto](https://eole.telecom-paris.fr/vos-serv
 
 ## Configuration ssh
 
-Ouvrer un terminal et taper :
+- Ouvrer un terminal
+- Taper :
 ```sh
-cd ~
-touch telecom_ssh_config.sh
-chmod u+x telecom_ssh_config.sh
-nano telecom_ssh_config.sh
-```
-Puis :
-- Copier coller le fichier suivant
-  ```sh
-  email="yann.ruellan@telecom-paris.fr"
-  user="yruellan-24"
-  host="tp-1a201-10"
+mkdir ~/.ssh
+touch ~/.ssh/config
+
+function new_config(){
+
+  cd ~
+  key=".ssh/my_key_of_test"
   
-  mkdir ~/.ssh
+  ssh-keygen -t rsa -C $1 -q -N "" -f $key
   
-  ssh-keygen -t rsa -C $email -q -N "" -f ~/.ssh/telecom
+  ssh-copy-id -i $key $2@$3
   
-  ssh-copy-id -i ~/.ssh/telecom user@host
-  
-  touch ~/.ssh/config
   echo "Host telecom" >> ~/.ssh/config
-  echo "  User $user" >> ~/.ssh/config
-  echo "  HostName $host" >> ~/.ssh/config
-  echo "  IdentityFile ~/.ssh/telecom" >> ~/.ssh/config
-  echo "" >> ~/.ssh/config
-  ```
-- Modifier email, user et host (**modifiable seulement au clavier**)
-- Controle + O (sauvegarde le fichier)
-- Entrer
-- Controle + X (quitte nano)
-- Taper `./telecom_ssh_config.sh`
+  echo "  User $2" >> ~/.ssh/config
+  echo "  HostName $3" >> ~/.ssh/config
+  echo "  IdentityFile ~/$key" >> ~/.ssh/config
+  echo " " >> ~/.ssh/config
+}
+```
+- Taper `new_config "yann.ruellan@telecom-paris.fr" "yruellan-24" "tp-1a201-10"` en modifiant votre email et votre identifiant
 - Entrer le mot de passe Telecom Paris / Synapse
-- Taper `rm telecom_ssh_config.sh`
+- La connexion ssh est configurée 
 
+## Utilisation de ssh
 
-### Etablir la connection : `ssh telecom`
+Etablir la connection : `ssh telecom`
+Arret de la connexion : `exit`
 
-### Arret de la connexion : `exit`
+## Utilisation de ssh avec Visual Studio Code
 
-## Utilisation avec Visual Studio Code
-
+Vous pouvez vous connectez en ssh au serveur avec VS Code sans utiliser de terminal.
 
 ### Pour Unix (Linux et MacOS)
 - Ouvrer VS Code
@@ -71,13 +63,17 @@ Puis :
 
 ## Configuration X11
 
+X11 permet d'avoir un retour vidéo de la connexion ssh.
+
 ### MacOS
+
+Tutoriel sur https://www.petergirnus.com/blog/how-to-use-sshfs-on-macos.
 
 ## Installation LOGISIM
 
-Il faut être connecter en ssh avec X11 activé
+Il faut être connecté en ssh avec X11 activé.
 
-### Telechargement
+### Téléchargement
 ```sh
 wget https://inf107.telecom-paris.fr/exercises/part-1/files/td-logisim.tar.gz
 tar xzf td-logisim.tar.gz
