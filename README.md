@@ -46,12 +46,6 @@ Arret de la connexion : `exit`
 
 Vous pouvez vous connectez en ssh au serveur avec VS Code sans utiliser de terminal.
 
-### Pour Unix (Linux et MacOS)
-- Ouvrer VS Code
-- Appuyer sur le bouton vert en bas a gauche
-- Selectionner l'option 'Connect to host' ou 'ssh'
-- Selectionner l'option 'telecom'
-
 ### Pour Windows (avec WSL)
 
 - Ouvrer l'explorateur de fichier
@@ -61,6 +55,12 @@ Vous pouvez vous connectez en ssh au serveur avec VS Code sans utiliser de termi
 - Aller sur votre dossier utilisateur Windows
 - Coller le dossier .ssh
 - Suivre la procédure Unix
+
+### Pour Unix (Linux et MacOS)
+- Ouvrer VS Code
+- Appuyer sur le bouton vert en bas a gauche
+- Selectionner l'option 'Connect to host' ou 'ssh'
+- Selectionner l'option 'telecom'
 
 ## Configuration X11
 
