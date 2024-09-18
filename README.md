@@ -33,6 +33,7 @@ function new_config(){
 }
 ```
 - Taper `new_config "yann.ruellan@telecom-paris.fr" "yruellan-24" "tp-1a201-10"` en modifiant votre email et votre identifiant
+  Vous pouvez aussi modifier le numéro du poste. Voici la liste des [postes](https://tp.telecom-paris.fr/).
 - Entrer le mot de passe Telecom Paris / Synapse
 - La connexion ssh est configurée 
 
@@ -67,7 +68,11 @@ X11 permet d'avoir un retour vidéo de la connexion ssh.
 
 ### MacOS
 
-Tutoriel sur https://www.petergirnus.com/blog/how-to-use-sshfs-on-macos.
+https://www.cyberciti.biz/faq/apple-osx-mountain-lion-mavericks-install-xquartz-server/
+
+### Linux - WSL
+
+Voir sur internet. Tutoriel à venir...
 
 ## Installation LOGISIM
 
@@ -84,3 +89,21 @@ tar xzf td-logisim.tar.gz
 cd ~/td-logisim/mux
 make
 ```
+
+## Synchronisation via SSHFS
+
+SSHFS permet de vous connecter au serveur comme si c'était une clé USB.
+
+### MacOS
+
+Tutoriel sur https://www.petergirnus.com/blog/how-to-use-sshfs-on-macos.
+
+### Linux - WSL
+
+Voir sur internet. Tutoriel à venir...
+
+### Utilisation
+
+Monter le server : `sshfs user@post:directory ~/mount_dir -o IdentityFile=key_dir`
+
+Déconnexion : ` diskutil umount force ~/mount_dir`
