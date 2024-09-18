@@ -2,6 +2,11 @@
 
 Tutoriel sur la configuration ssh pour se connecter aux ordi de Telecom Paris.
 
+Ce tutoriel n'explique que pour MacOS et Linux.
+Si vous avez Windows, utiliser WSL (cf [téléchargement](https://learn.microsoft.com/en-us/windows/wsl/install)).
+
+Il existe des alternatives comme [putty](https://www.putty.org/).
+
 ## IMPORTANT : WIFI
 
 Vous devez etre connecter au wifi "Campus-Telecom" pour pouvoir etablir une connexion ssh.
